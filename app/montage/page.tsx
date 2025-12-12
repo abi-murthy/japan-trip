@@ -110,8 +110,8 @@ export default function MontagePage() {
             {SECTIONS.map((s) => (
               <section
                 key={s.id}
-                ref={(el) => {
-                  sectionRefs.current[s.id] = el;
+                ref={(el: HTMLDivElement | null) => {
+                    sectionRefs.current[s.id] = el;
                 }}
                 className="min-w-full snap-start flex flex-col px-6 md:px-10 py-8"
               >
